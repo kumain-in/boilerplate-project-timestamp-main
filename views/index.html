@@ -1,32 +1,37 @@
 <!DOCTYPE html>
-
 <html>
    <head>
-      <title>Timestamp Microservice | freeCodeCamp.org</title>
-      <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Timestamp Microservice | freeCodeCamp.org</title>
+    <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="/public/style.css" rel="stylesheet" type="text/css">
    </head>
-
    <body>
-    <h1>Timestamp Microservice</h1>
-    <hr />
     <div class="container">
-      <h2>Example Usage:</h2>
-      <ul>
-        <li><a href="api/2015-12-25">[project url]/api/2015-12-25</a></li>
-        <li><a href="api/1451001600000">[project url]/api/1451001600000</a></li>
-      </ul>
+        <h1>Timestamp Microservice</h1>
+        <hr />
+        <p>
+            This API provides the Unix timestamp and UTC date string for a given date.
+            When you send a request to <code>/api/:date?</code>, the service will attempt to parse the <code>date</code> parameter.
+        </p>
+        <div class="api-examples">
+            <h2>Example Usage:</h2>
+            <ul>
+                <li><a href="api/2015-12-25">[project url]/api/2015-12-25</a></li>
+                <li><a href="api/1451001600000">[project url]/api/1451001600000</a></li>
+            </ul>
 
-      <h2>Example Output:</h2>
-      <p>
-        <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code>
-      </p>
+            <h2>Example Output:</h2>
+            <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code>
+
+            <p>If the date parameter is empty, the API will use the current time:</p>
+            <a href="api/">[project url]/api</a>
+        </div>
     </div>
-    <div class="footer">
+    <footer class="footer">
       <p>
-        By <a href="https://www.freecodecamp.org/">freeCodeCamp.org</a>
+        By <a href="https://www.freecodecamp.org/">freeCodeCamp</a>
       </p>
-    </div>
-  </body>
+    </footer>
+   </body>
 </html>
